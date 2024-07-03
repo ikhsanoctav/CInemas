@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data/>
+    <LinearLayout android:id="@+id/linearColumn"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:id="@+id/linearColumnvector"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerHomePage"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_10pxh}" tools:itemCount="6" tools:listitem="@layout/row_page"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearColumnpromo"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_21pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingEnd="@dimen/_16pxh" android:paddingStart="@dimen/_16pxh">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPromo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/lbl_promo"
+                    style="@style/txtRobotoromansemibold12" tools:text="@string/lbl_promo"/>
+                <ImageView android:id="@+id/imageEightOne"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_marginStart="@dimen/_6pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_width="match_parent"
+                    android:scaleType="fitXY"
+                    cornerRadius="@{@dimen/_10pxh}"
+                    imageRes="@{@drawable/img_8}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_8"/>
+            </LinearLayout>
+            <View android:background="@color/white_A700"
+                android:id="@+id/viewView"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_77pxv"
+                android:layout_marginTop="@dimen/_17pxv" android:layout_width="@dimen/_360pxh"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

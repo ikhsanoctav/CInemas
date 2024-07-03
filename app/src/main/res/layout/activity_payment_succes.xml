@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentSuccesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:gravity="center_horizontal"
+        android:id="@+id/toolbarToolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:contentInsetStart="0dp" style="@style/groupStyle">
+
+    <LinearLayout
+        android:id="@+id/linearRowarrowleft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <ImageView
+            android:id="@+id/imageArrowleftOne"
+            android:layout_width="@dimen/_24pxh"
+            android:layout_height="@dimen/_24pxh"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrow_left"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_arrow_left"
+            android:layout_marginStart="15dp"/>
+
+        <TextView
+            android:id="@+id/txtPayment"
+            style="@style/txtRobotobold18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/_90pxh"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_4pxh"
+            android:singleLine="true"
+            android:text="@{paymentSuccessVM.paymentSuccessModel.txtPayment}"
+            tools:text="@string/lbl_ringkasan_order" />
+
+        <ImageView
+            android:id="@+id/imageMoreOne"
+            android:layout_width="@dimen/_22pxh"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_80pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_more"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearColumnqrcode115"
+        style="@style/groupStyleyellow_700cornerRadius"
+        android:layout_width="263dp"
+        android:layout_height="273dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_8pxh"
+        android:paddingVertical="@dimen/_8pxv"
+        app:layout_editor_absoluteX="@dimen/_50pxh"
+        app:layout_editor_absoluteY="@dimen/_80pxh"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="80dp">
+
+        <ImageView
+            android:id="@+id/imageQrcode11563803"
+            cornerRadius="@{@dimen/_16pxh}"
+            imageRes="@{@drawable/img_qrcode_11563803}"
+            android:layout_width="@dimen/_250pxh"
+            android:layout_height="@dimen/_250pxh"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/img_qrcode_11563803" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtDescription"
+        style="@style/txtIBMPlexSansregular14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:singleLine="true"
+        android:text="@{paymentSuccessVM.paymentSuccessModel.txtDescription}"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="364dp"
+        tools:text="@string/msg_tunjukan_kode_ini" />
+
+    <ImageView
+        android:id="@+id/imageTearlineOne"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40pxh"
+        android:scaleType="fitXY"
+        android:src="@drawable/img_tear_line"
+        tools:ignore="ContentDescription"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="384dp"
+        tools:src="@drawable/img_tear_line" />
+
+    <TextView
+        android:id="@+id/txtAquiteplace"
+        style="@style/txtRobotobold18"
+        android:layout_width="355dp"
+        android:layout_height="28dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/_4pxh"
+        android:singleLine="true"
+        android:text="@{paymentSuccessVM.paymentSuccessModel.txtAquiteplace}"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="438dp"
+        tools:text="@string/msg_a_quite_place" />
+
+    <LinearLayout
+        android:id="@+id/linearItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="512dp">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearItem1"
+        android:layout_width="340dp"
+        android:layout_height="19dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="512dp">
+
+        <TextView
+            android:id="@+id/txtTanggal"
+            style="@style/txtRobotoregular14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{paymentSuccessVM.paymentSuccessModel.txtTanggal}"
+            tools:text="@string/lbl_tanggal" />
+
+        <TextView
+            android:id="@+id/txtRab26juni"
+            style="@style/txtRobotomedium14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_168pxh"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{paymentSuccessVM.paymentSuccessModel.txtRab26juni}"
+            tools:text="@string/msg_rab_26_juni_2024" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearItem2"
+        android:layout_width="338dp"
+        android:layout_height="27dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="542dp">
+
+        <TextView
+            android:id="@+id/txtStudio"
+            style="@style/txtRobotoregular14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{paymentSuccessVM.paymentSuccessModel.txtStudio}"
+            tools:text="@string/lbl_studio" />
+
+        <TextView
+            android:id="@+id/txtTwo"
+            style="@style/txtRobotomedium14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_280pxh"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{paymentSuccessVM.paymentSuccessModel.txtTwo}"
+            tools:text="@string/lbl_2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearItem3"
+        android:layout_width="336dp"
+        android:layout_height="21dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="607dp">
+
+        <TextView
+            android:id="@+id/txtKursi"
+            style="@style/txtRobotoregular14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{paymentSuccessVM.paymentSuccessModel.txtKursi}"
+            tools:text="@string/lbl_kursi" />
+
+        <TextView
+            android:id="@+id/txtG7geight"
+            style="@style/txtRobotomedium14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/_255pxh"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{paymentSuccessVM.paymentSuccessModel.txtG7geight}"
+            tools:text="@string/lbl_g7_g8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearItem4"
+        android:layout_width="340dp"
+        android:layout_height="21dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="578dp">
+
+        <TextView
+            android:id="@+id/txtTimeZone"
+            style="@style/txtRobotoregular14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="@dimen/_1pxv"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{paymentSuccessVM.paymentSuccessModel.txtTimeZone}"
+            tools:text="@string/lbl_cost" />
+
+        <TextView
+            android:id="@+id/txtRpCounter"
+            style="@style/txtRobotomedium14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="@dimen/_220pxh"
+            android:ellipsize="end"
+            android:lineSpacingExtra="@dimen/_3pxh"
+            android:singleLine="true"
+            android:text="@{paymentSuccessVM.paymentSuccessModel.txtRpCounter}"
+            tools:text="@string/lbl_rp_50_000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRowrefund"
+        android:layout_width="317dp"
+        android:layout_height="55dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="643dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRefund"
+            style="@style/btnRoundedOutline"
+            android:layout_width="@dimen/_149pxh"
+            android:layout_height="@dimen/_56pxv"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingBottom="@dimen/_17pxv"
+            android:singleLine="true"
+            android:text="@string/lbl_refund"
+            android:textAllCaps="false"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="643dp"
+            tools:text="@string/lbl_refund" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSend"
+            style="@style/btnSolidRounded"
+            android:layout_width="@dimen/_149pxh"
+            android:layout_height="@dimen/_56pxv"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:drawableStart="@drawable/img_forward_arrow"
+            android:drawablePadding="@dimen/_8pxh"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingBottom="@dimen/_17pxv"
+            android:singleLine="true"
+            android:text="@string/lbl_send"
+            android:textAllCaps="false"
+            tools:text="@string/lbl_send" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtUbertosxxi"
+        style="@style/txtRobotomedium14"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/_3pxh"
+        android:singleLine="true"
+        android:text="@{paymentSuccessVM.paymentSuccessModel.txtUbertosxxi}"
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="484dp"
+        tools:text="@string/lbl_ubertos_xxi" />
+
+    <TextView
+        android:id="@+id/txtCinema"
+        style="@style/txtRobotoregular14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:ellipsize="end"
+        android:lineSpacingExtra="@dimen/_3pxh"
+        android:singleLine="true"
+        android:text="@{paymentSuccessVM.paymentSuccessModel.txtCinema}"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="484dp"
+        tools:text="@string/lbl_cinema" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="pageRowModel" type="com.cinemas.detail film.modules.detailfilm.data.model.PageRowModel"/>
+    </data>
+    <TextView android:ellipsize="end" android:id="@+id/txtWed"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:singleLine="true"
+        android:text="@{pageRowModel.txtWed}"
+        style="@style/txtRobotoromansemibold9" tools:text="@string/lbl_wed"/>
+
+    <TextView android:ellipsize="end" android:id="@+id/txtThu"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:singleLine="true"
+        android:text="@{pageRowModel.txtThu}
+        style="@style/txtRobotoromansemibold9" tools:text="@string/lbl_thu"/>
+
+    <TextView android:ellipsize="end" android:id="@+id/txtFri"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:singleLine="true"
+        android:text="@{pageRowModel.txtFri}"
+        style="@style/txtRobotoromansemibold9" tools:text="@string/lbl_fri"/>
+
+    <TextView android:ellipsize="end" android:id="@+id/txtSat"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:text="@{pageRowModel.txt}"
+        style="@style/txtRobotoromansemibold9"
+        tools:text="@string/lbl_sat"/>
+
+</layout>
